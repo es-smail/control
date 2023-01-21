@@ -1,14 +1,13 @@
 package com.example.controle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText number;
     Button btn_afficher;
     TextView textview;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btn_afficher=findViewById(R.id.btn_2);
         btn_quitter=findViewById(R.id.btn_3);
         number =findViewById(R.id.et_number);
-        textview=findViewById(R.id.textView);
+        textview=findViewById(R.id.text_1);
         btn_quitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,10 +39,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 number.setText(null);
-                textview.setText(R.string.defaut);
-
-                textview.setText(R.string.defaut);
-
+                textview.setText("" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?\n" +
+                        "         ? * 0 =?");
 
             }
         });
