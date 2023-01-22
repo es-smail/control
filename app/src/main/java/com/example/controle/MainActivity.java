@@ -3,7 +3,6 @@ package com.example.controle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     EditText number;
     Button btn_afficher;
     TextView textview;
-    Button color1,color2,color3;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +27,6 @@ public class MainActivity extends AppCompatActivity {
         btn_quitter=findViewById(R.id.btn_3);
         number =findViewById(R.id.et_number);
         textview=findViewById(R.id.text_1);
-        color1=findViewById(R.id.color1);
-        color2=findViewById(R.id.color2);
-        color3=findViewById(R.id.color3);
         btn_quitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,13 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        
+
         btn_reinitializer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 number.setText(null);
-                textview.setText("" +
-                        "         ? * 0 =?\n" +
+                textview.setText("? * 0 =?\n" +
                         "         ? * 0 =?\n" +
                         "         ? * 0 =?\n" +
                         "         ? * 0 =?\n" +
@@ -86,31 +80,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-        color1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setMyScreenColor(Color.WHITE);
-            }
-        });
-        color2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setMyScreenColor(0x31E21EE9);
-            }
-        });
-        color3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setMyScreenColor(0x4F673AB7);
-            }
-        });
-
     }
-    public void setMyScreenColor(int color){
-        View v=this.getWindow().getDecorView();
-        v.setBackgroundColor(color);
-    }
+
 }
 
