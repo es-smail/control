@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 number.setText(null);
-                textview.setText("" +
-                        "         ? * 0 =?\n" +
+                textview.setText("? * 0 =?\n" +
                         "         ? * 0 =?\n" +
                         "         ? * 0 =?\n" +
                         "         ? * 0 =?\n" +
